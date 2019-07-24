@@ -1,0 +1,34 @@
+{
+    "name": "Medium story stats",
+    "version": "0.1",
+    "description": "Chrome extension displaying story stats",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+        {
+          "matches": [
+            "https://medium.com/new-story",
+            "https://medium.com/p/*/edit"
+          ],
+          "js": [
+            "StatsBlock.js",
+            "contentScript.js"
+          ],
+          "css": ["styles.css"]
+        }
+    ],
+    "icons": {
+        "32": "assets/images/icon.png",
+        "48": "assets/images/icon.png",
+        "64": "assets/images/icon.png",
+        "128": "assets/images/icon.png"
+    },
+    "page_action": {
+        "default_icons": {
+          "32": "assets/images/page_icon@32.png",
+          "48": "assets/images/page_icon@48.png",
+          "64": "assets/images/page_icon@64.png",
+          "128": "assets/images/page_icon@128.png"
+      }
+    },
+    "manifest_version": 2
+}
